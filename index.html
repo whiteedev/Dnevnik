@@ -116,6 +116,32 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
+        /* Анимация подсветки кнопки */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #ffeb3b;
+    }
+    50% {
+        box-shadow: 0 0 20px #ffeb3b;
+    }
+    100% {
+        box-shadow: 0 0 5px #ffeb3b;
+    }
+}
+
+        
+        .btn-dz {
+          display: inline-block;
+    padding: 12px 25px;
+    background-color: #ffeb3b;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    animation: glow 1.5s infinite; /* Добавляем анимацию подсветки */
+}
+
     </style>
 </head>
 <body>
@@ -138,7 +164,7 @@
     <p>Здесь вы можете найти актуальную информацию о ваших занятиях и домашнем задании.</p>
 </div>
 <div class="container" id="schedule">
-    <h2>Расписание на вторник</h2>
+    <h2>Расписание на среду</h2>
     <table>
         <thead>
             <tr>
@@ -147,36 +173,40 @@
         </thead>
         <tbody>
             <tr>
-                <td>Биология</td>
+                <td>История</td>
             </tr>
             <tr>
-                <td>Музыка</td>
+                <td>Информатика</td>
             </tr>
             <tr>
-                <td>Физра</td>
-            </tr>
-            <tr>
-                <td>ОБЖ</td>
+                <td>География</td>
             </tr>
             <tr>
                 <td>Английский</td>
             </tr>
             <tr>
-                <td>Химия</td>
+                <td>Алгебра</td>
+            </tr>
+            <tr>
+                <td>Вероятность</td>
+            </tr>
+               <tr>
+                <td>Физика</td>
             </tr>
         </tbody>
     </table>
-    <button onclick="scrollToHomework()">Смотреть ДЗ</button>
+    <button class="btn-dz" onclick="scrollToHomework()">СМОТРЕТЬ ДЗ</button>
 </div>
 
 <div class="container homework-section" id="homework">
     <h2>Домашнее задание</h2>
-    <p>Биология: §5, 7</p>
-    <p>Музыка: Ничего</p>
-    <p>Физра: Взять форму</p>
-    <p>ОБЖ: Ничего</p>
-    <p>Английский:  гр М.Ш. №4(а,в) стр. 24</p>
-    <p>Химия: Выучить таблицу</p>
+    <p>История: Конспект на тему <b>"война за независимость в США"</b></p>
+    <p>Информатика: Ничего</p>
+    <p>География: Взять форму</p>
+    <p>Английский: стр 38, читать гл. стр 39</p>
+    <p>Алгебра:  Номер 106, 81, 82</p>
+    <p>Вероятность: Ничего</p>
+    <p>Физика: </p>
 </div>
 <script>
     function scrollToHomework() {
